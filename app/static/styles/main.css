@@ -170,8 +170,16 @@ ul {
     color: black;
 }
 
+.black-subtext:hover {
+    color: rgba(255,205,105,255);
+}
+
 .blue-subtext {
     color: rgba(38, 114, 227, 1);
+}
+
+.blue-subtext:hover {
+    color: rgba(28,83,159,255);
 }
 
 .interests-title {
