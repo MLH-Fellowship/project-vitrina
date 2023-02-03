@@ -158,3 +158,48 @@ ul {
     list-style: none;
 }
 
+/* Classes for about */
+
+.multibar {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.black-subtext {
+    color: black;
+}
+
+.blue-subtext {
+    color: rgba(38, 114, 227, 1);
+}
+
+.interests-title {
+    margin-left: 83px;
+    margin-top: 11px;
+    
+    font-size: 40px;
+}
+
+.content-flexbox {
+    display: flex;
+
+    margin-left: 83px;
+    margin-right: 83px;
+}
+
+.description-box {
+    margin-right: 9px;
+
+    flex-grow: 2;
+
+    text-align: left;
+    font-size: 20px;
+}
+
+.image-box {
+    margin-left: 9px;
+}
+
+
+

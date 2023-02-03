@@ -13,3 +13,8 @@ if __name__ == "__main__":
 def index():
     return render_template('index.html', title="Vitrina", project_1="Team Portfolio Site", languages="Flask, JS, AWS",
                            date_1="Jan 26/2023 - Feb 06/2023", url=os.getenv("URL"))
+
+@app.route('/hobbies')
+def about():
+    return render_template('hobbies.html', title="Vitrina", project_1="Team Portfolio Site", languages="Flask, JS, AWS",
+                           date_1="Jan 26/2023 - Feb 06/2023", url=os.getenv("URL"))
