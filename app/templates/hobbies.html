@@ -5,32 +5,42 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Open Graph metadata for social sharing -->
     <meta property="og:title" content="Personal Portfolio">
     <meta property="og:description" content="My Personal Portfolio">
     <meta property="og:url" content="{{ url }}">
 
+    <!-- Link to Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
+    <!-- Link to main stylesheet -->
     <link lang='sass' rel="stylesheet" href="./static/styles/main.css">
+    <!-- Link to favicon -->
     <link rel='icon' href='./static/img/favicon.ico' type='image/x-icon' />
+    <!-- Page title -->
     <title>{{ title }}</title>
 </head>
 
 <body>
+    <!-- Navigation bar -->
     <header class="nav-bar">
         <div class="nav-content">
+            <!-- Home link -->
             <a href="/">
                 <div class="nav-logo">
+                    <!-- Logo image -->
                     <img src="./static/img/logo.svg" />
                 </div>
             </a>
         </div>
     </header>
 
+    <!-- Profile section -->
     <div class="profile">
+        <!-- Table styles -->
         <style>
             .table-top {
                 margin: 0 auto;
@@ -38,6 +48,7 @@
         </style>
         <table class="table-top">
             <tr>
+                <!-- Image styles -->
                 <style>
                     .img1 {
                         border-radius: 50%;
@@ -51,12 +62,13 @@
                     }
                 </style>
                 
-
+                <!-- Profile image -->
                 <th>
                     <img class="img1" src="./static/img/XavierPP.png">
                 </th>
             </tr>
             <tr>
+                <!-- Titles styles -->
                 <style>
                     .titles {
                         font-size: 24px;
@@ -65,6 +77,7 @@
                         text-align: center;
                     }
                 </style>
+                <!-- Profile name -->
                 <td>
                     <p class="titles">Xavier</p>
                 </td>
@@ -72,36 +85,46 @@
         </table>
     </div>
 
+    <!-- This div container holds the navigation bar for different sections of the resume -->
     <div class="multibar">
+        <!-- Section: About Yourself -->
         <div>
             <b class="black-subtext">About Yourself</b>
         </div>
+        <!-- Section: Work Experience -->
         <div>
             <b class="black-subtext">Work Experience</b>
         </div>
+        <!-- Section: Education -->
         <div>
             <b class="black-subtext">Education</b>
         </div>
+        <!-- Section: Hobbies -->
         <div>
             <b class="blue-subtext">Hobbies</b>
         </div>
+        <!-- Section: Places Visited -->
         <div>
             <b class="black-subtext">Places Visited</b>
         </div>
     </div>
 
+
+    <!-- Interests section -->
     <div class="interests-title">
         <b>My interests are...</b>
     </div>
 
+    <!-- Flexbox container for description and image -->
     <div class="content-flexbox">
+        <!-- Description box -->
         <div class="description-box">
             My Interests are...I am [insert biography insert biography insert biography insert biography insert biography insert biography] insert biography insert biography [insert biography insert biography insert biography insert biography insert biography insert biography] insert biography insert biography [insert biography insert biography insert biography insert biography insert biography insert biography] insert biography insert biography [insert biography insert biography insert biography insert biography insert biography insert biography] insert biography insert biography [insert biography insert biography insert biography insert biography insert biography insert biography] insert biography insert biography [insert biography insert biography insert biography insert biography 
         </div>
+        <!-- Image box -->
         <div>
             <img src="./static/img/programming.jpg" width="350px">
         </div>
     </div>
-
 </body>
 </html>
