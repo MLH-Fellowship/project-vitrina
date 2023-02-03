@@ -20,4 +20,4 @@ def index():
 @app.route('/xavier-work')
 def workexp():
     return render_template('work.html', title="Xavier's Profile",name="Xavier",company_name="MLH Fellowship", role="Site Reliability Engineer Fellow",
-                           work_length="Jan 30/2023 - April 30/2023", url=os.getenv("URL"))
+                           work_length="Jan 30/2023 - April 30/2023",pic_url="./static/img/XavierPP.png", url=os.getenv("URL"))
