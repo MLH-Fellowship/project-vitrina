@@ -1,0 +1,40 @@
+<form id="form" method="POST" action="http://127.0.0.1:5000/api/timeline_post">
+  <label for="name" class="form-label">Name:</label>
+  <input type="text" class="form-control" id="name" name="name" required />
+  <label for="email" class="form-label">Email:</label>
+  <input type="text" class="form-control" id="email" name="email" required />
+  <label for="content" class="form-label">Content:</label>
+  <input
+    type="text"
+    class="form-control"
+    id="content"
+    name="content"
+    required
+  />
+
+  <button type="submit">Submit</button>
+</form>
+
+<h1>Users:</h1>
+<ul></ul>
+
+<script>
+  fetch("http://127.0.0.1:5000/api/timeline_post")
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+      data.timeline_posts.forEach((user) => {
+        const markup = `<li> Name: ${user.name} Email: ${user.email} Content: ${user.content}</li>`;
+        document.querySelector("ul").insertAdjacentHTML("beforeend", markup);
+      });
+    })
+    .catch((error) => console.log(error));
+
+  const form = document.getElementById("form");
+
+  form.addEventListener("submit", function (event) {
+    document.getElementsByName("referer")[0].value = document.referrer;
+  });
+</script>

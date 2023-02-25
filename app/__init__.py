@@ -31,7 +31,6 @@ class TimelinePost(Model):
 mydb.connect()
 mydb.create_tables([TimelinePost])
 
-
 @app.route('/api/timeline_post', methods=['POST'])
 def post_time_line_post():
     name = request.form['name']
@@ -40,6 +39,8 @@ def post_time_line_post():
     timeline_post = TimelinePost.create(name=name, email=email, content=content)
 
     return model_to_dict(timeline_post)
+
+    
 
 @app.route('/api/timeline_post', methods=['GET'])
 def get_time_line_post():
@@ -50,6 +51,11 @@ def get_time_line_post():
 TimelinePost.select().order_by(TimelinePost.created_at.desc())
         ]
     }
+
+@app.route('/timeline') 
+def timeline(): 
+    return render_template('timeline.html',
+title="Timeline")
 
 
 if __name__ == "__main__":
@@ -206,7 +212,8 @@ def cin_places():
                            education_route="cin_education",
                            places_route="cin_places",
                            mapper=cindy_mapper,
-                           url=os.getenv("URL"))
+                           url=os.getenv("URL"),
+                           endpoint_route="timeline")
 
 
 @app.route('/cindy-work')
@@ -221,7 +228,8 @@ def cin_work():
                            places_route="cin_places",
                            career=cindy_career,
                            user_education=cindy_education,
-                           url=os.getenv("URL"))
+                           url=os.getenv("URL"),
+                           endpoint_route="timeline")
 
 
 
@@ -237,7 +245,8 @@ def cin_hobby():
                            education_route="cin_education",
                            places_route="cin_places",
                            user_hobbies=cindy_hobby,
-                           url=os.getenv("URL"))
+                           url=os.getenv("URL"),
+                           endpoint_route="timeline")
 
 
 @ app.route('/cindy-aboutme')
@@ -249,7 +258,8 @@ def cin_aboutme():
                            hobby_route="cin_hobby",
                            education_route="cin_education",
                            places_route="cin_places",
-                           url=os.getenv("URL"))
+                           url=os.getenv("URL"),
+                           endpoint_route="timeline")
 
 
 """ Raven Routes """
