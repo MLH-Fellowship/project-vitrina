@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd MLH-project-vitrina
+# cd MLH-project-vitrina
 git fetch
 git reset origin/main --hard
 
